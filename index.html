@@ -24,8 +24,8 @@
         colores.push("violeta");
         console.log(colores);
     
- */        //Concatenacion de cadenas de texto tipo string.
-        let nombre = "Juan";
+ */       //Concatenacion de cadenas de texto tipo string.
+/*         let nombre = "Juan";
         let apellido = "Suarez";
 
         let saludo = "Hola buenos dias" + " " + nombre + " " + apellido;
@@ -35,11 +35,70 @@
         una prueba de
         interpolacion en javascript`; 
         console.log(ul);
+
+        let ol = `
+        este es otra prueba
+        de interpolacion de 
+        Javascript`
+        console.log(ol) */
+
+        /* NUMEROS */
+        let a = 2;
+        let b = new Number(1);
+        let c = 7.19;
+
+        console.log(a)
+        console.log(b)
+        /* Cantidad de numeros decimales (toFixed(#decimales)) */
+        /* Redondea de acuerdo al numero de digitos que le pongas */
+        console.log(c.toFixed(1))
+        /* Añade ceros para llegar a la cantidad de decimales dadas */
+        console.log(c.toFixed(5))
+        /* Filtrar solo la parte entera del numero */
+        console.log(parseInt(c))
+        /* Filtrar solo la parte flotante del numero */
+        console.log(parseFloat(c))
+
+        /* Utilizando el objeto Number para transformar un objeto Date */        
+        var d = new String("12.4");
+        console.log(Number(d));
+        /* VALORES BOOLEANOS */
+        let verdadero = true;
+        let falso = false;
+        /* Constructor Boolean */
+        let v = Boolean(true);
+        let f = Boolean(false);
+
+        console.log(verdadero, falso, v, f);
+        /* typeof: te muestra el tipo de dato */
+        console.log(typeof verdadero, typeof falso);
+        /* Valores que tienden a true: truthy */
+        console.log(Boolean(" "))
+        console.log(Boolean(-7))
+        console.log(Boolean({}))
+        /* Valores que tienden a false */
+        console.log(Boolean(NaN))
+        console.log(Boolean(undefined))
+        console.log(Boolean(-0))
+        /* VALORES PRIMITIVOS */
+        /* Cuando no defines tu variable (undefined) */
+        let indefinida;
+        console.log(indefinida)
+        /* La variable esta vacia intencionalmente */
+        let nulo=null;
+        console.log(nulo);
+        /* NaN - Not a Number */
+        let noEsUnNumero = "Hola"*3.7;
+        console.log(noEsUnNumero);
+
+
+
+
         
 
 
 
-
+        
 
     </script>
 </body>
