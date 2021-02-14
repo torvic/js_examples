@@ -90,11 +90,49 @@
         /* NaN - Not a Number */
         let noEsUnNumero = "Hola"*3.7;
         console.log(noEsUnNumero);
+        /* FUNCIONES */
+        /* funcion declarada */
+        /* No recibe valores ni retorna valores */
+        function estoEsUnaFuncion() {
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+        /* Invocacion de la funcion */
+        estoEsUnaFuncion();
+        /* ARREGLOS */
+        console.log("========== Arreglos ==========")
+        const arreglo = [];
+        const arreglob = [1, true, "Hola", ["A", "B", "C", [1,"boom",false]]];
+        console.log(arreglob);
+        console.log(arreglo);
+        console.log(arreglob.length);
+        console.log(arreglob[2]);
+        console.log(arreglob[3][3][2]);
+        /* Otras formas de construir arreglos */
+        const arregloC = Array.of("A",false, 2, ["boom", 2, true]);
+        console.log(arregloC);
 
+        const arregloD = Array(100).fill(true);
+        console.log(arregloD);
 
+        const arregloE = new Array("Hola", true, 1, ["boom", false, 3]);
+        console.log(arregloE);
+        /* Metodos de los arreglos */
+        const colores = ["blue", "red", "green"];
+        console.log(colores);
 
+        colores.push("black");
+        console.log(colores);
 
+        colores.pop();
+        console.log(colores);
         
+        colores.forEach(function(el,i) {
+            console.log(el, i);
+            /* interpolacion */
+            console.log(`<h> ${el} </h>`)
+        })
 
 
 
