@@ -133,16 +133,74 @@
             /* interpolacion */
             console.log(`<h> ${el} </h>`)
         })
-
-        console.log("=========== Objetos ===========");
+        /* OBJETOS BASICO */
+/*         console.log("=========== Objetos ===========");
         const objetoUno = {}
         console.log(objetoUno)
 
         const objetoDos = new Object()
         console.log(objetoDos)
 
+        let persona = {
+                nombre:"Jon",
+                apellido:"Escobar",
+                soltero:false,
+                asignaturas:["matematicas","literatura","comunicacion"],
+                contacto:{
+                        correo:"example@example.com",
+                        twiter:"@example",
+                },
+                saludo: function(){
+                        return "Hello world!!!";
+                },
+                contestar: function(){
+                        console.log("He contestado");
+                },
+                mensaje: function(){
+                        console.log(`Hola mi nombre es ${this.nombre} y mi apellido es ${this.apellido}, me gusta la asignatura de las ${this.asignaturas[0]}`)
+                }
+        }
+        console.log(persona["nombre"]);
+        console.log(persona["apellido"]);
+        console.log(persona.nombre);
+        console.log(persona.apellido);
+        console.log(persona.asignaturas[0]);
+        console.log(persona.contacto.correo);
+        console.log(persona.contacto.twiter);
+        console.log(persona.saludo());
+        persona.contestar();
+        persona.mensaje(); */
+        /* DIFERENCIA ENTRE (===/!==) Y (==/!=) */
+/*         let variable = 3.0;
+        let variableString = "3.0";
+        console.log(typeof variable);
+        console.log(typeof variableString);
+        console.log(3 === "3.0");
+        console.log(3 == "3.0"); */
+        /* CONDICIONAL IF...ELSE */
+/*         let queso = "hai";
 
+        if (queso){
+                console.log('¡Siii! Hay queso para hacer tostadas con queso.');
+        }else{
+                console.log('No hay tostadas con queso para ti hoy :(.')
+        } */
+        /* Anidando if...else */
+        eleccion = 'soleado';
+        temperatura = 85;
+        if (eleccion === 'soleado'){
+                if (temperatura < 86){
+                        console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
+                }else if (temperatura >= 86){
+                        console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
+                }
+        }
         
+        if (eleccion === 'soleado' && temperatura < 86){
+                console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
+        } else if (eleccion === 'soleado' || temperatura >= 86){
+                console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
+        }
 
     </script>
 </body>
