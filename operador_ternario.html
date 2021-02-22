@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Operador ternario</title>
+</head>
+<body>
+    <label for="theme">Selecciona un tema: </label>
+    <select id="tema">
+        <option value="white">Blanco</option>
+        <option value="black">Negro</option>
+    </select>
+    
+    <h1> Este es mi sitio web </h1>
+
+    <script>
+        let select = document.querySelector('select');
+        let html= document.querySelector('html');
+        document.body.style.padding = '10px';
+
+        function update(bgColor, textColor){
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+
+        /* detector de eventos "onchange" */    
+        select.onchange = function(){
+            /* Operador ternario */
+            (select.value === 'black' ? update('black', 'white'):update('white','black'));
+        }
+    </script>
+</body>
+</html>
