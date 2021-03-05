@@ -186,7 +186,7 @@
                 console.log('No hay tostadas con queso para ti hoy :(.')
         } */
         /* Anidando if...else */
-        eleccion = 'soleado';
+        /* eleccion = 'soleado';
         temperatura = 85;
         if (eleccion === 'soleado'){
                 if (temperatura < 86){
@@ -200,6 +200,28 @@
                 console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
         } else if (eleccion === 'soleado' || temperatura >= 86){
                 console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
+        } */
+
+        /* Bucle for */
+
+        let numeros = [1,2,3,4,5,6,7,8,9,0];
+
+        console.log("===== break =====");
+        for (let k=0; k < 10; k++){
+                if (numeros[k] === 6){
+                        break;
+                        console.log("El valor que tengo es 6")
+                }
+                console.log(numeros[k])
+        }
+
+        console.log("===== continue =====");
+        for (let k=0; k < 10; k++){
+                if (numeros[k] === 6){
+                        console.log("El valor que tengo es 6")
+                        continue;
+                }
+                console.log(numeros[k])
         }
 
     </script>
