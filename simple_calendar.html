@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Simple</title>
+</head>
+<body>
+
+    <label for="months">Select a Month: </label>
+    <select id="months">
+        <option value="January">January</option>
+        <option value="February">February</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <h1>January</h1>
+    <p></p>
+    <script>
+        var select = document.querySelector('select');
+        var h1 = document.querySelector('h1');
+        var p = document.querySelector('p');
+
+        select.onchange = function () {
+            var choice = select.value;
+        
+            if (choice === "February") {
+                var days = 28;
+            } else if (choice === "January" || choice === "March" || choice === "May" || choice === "July" || choice === "August" || choice === "October" || choice === "December") {
+                var days = 31;
+            } else {
+                var days = 30;
+            };
+            
+            console.log(choice, days)
+            h1.textContent = choice;
+            p.textContent = `The month ${choice} have ${days} days.`;
+        }
+
+
+
+    </script>
+</body>
+</html>
