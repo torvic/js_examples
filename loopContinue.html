@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squares of integers</title>
+</head>
+<body>
+    <label for="search">Enter number: </label>
+    <input type="text">
+    <button>Buscar</button>
+
+    <p>Output: </p>
+
+    <script>
+        var input = document.querySelector('input')
+        var btn = document.querySelector('button')
+        var para = document.querySelector('p')
+
+
+        btn.addEventListener('click',function(){
+            para.textContent = 'Output: ';
+            var num = input.value;
+            input.value = '';
+            input.focus();
+            for(let i=1;i <= num;i++){
+                var sqRoot = Math.sqrt(i);
+                if (Math.floor(sqRoot) !== sqRoot){
+                    continue;
+                }
+                para.textContent += i + ' ';
+
+            }
+        })
+    </script>
+
+
+    
+</body>
+</html>
