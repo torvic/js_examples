@@ -223,6 +223,99 @@
                 }
                 console.log(numeros[k])
         }
+        console.clear();
+
+        /* Remember functions */
+        /* Funcion declarada */
+        function estoEsUnaFuncion() {
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+        }
+        //Invocacion de la funcion
+        //estoEsUnaFuncion();
+
+        function devuelveValor() {
+                console.log("Uno");
+                console.log("Dos");
+                return 19;
+                console.log("Tres");
+
+                return "Retorna cadena de texto";
+                
+        }
+        //let valor = devuelveValor();
+        //console.log(valor);
+
+        function saludar(nombre="desconocido", edad=0) {
+                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+        }
+        //saludar("Kenai",7);
+        //saludar();
+
+        // Funciones declaradas VS funciones expresadas.
+        //funcionDeclarada();
+        function funcionDeclarada() {
+                console.log("este es una funcion declarada, puede invocarse en calquier parte de vuestro codigo, incluso antes");
+        }
+        //funcionDeclarada();
+
+        /* FUNCIONES EXPRESADAS */
+        /* funcion anonima - sin nombre */
+        //funcionExpresada();
+        const funcionExpresada = function() {
+                console.log("Esto es una funcion expresada, se le asignada como valor a una variable, si invocamos esta funcion antes de su definicion js nos dira ...");
+        }
+        funcionExpresada();
+
+        const saludo = function () {
+                console.log("Hola");
+        }
+        saludo();
+
+        /* Arrow function -> otra forma de declarar una funcion expresadad anonima  */
+        /* const saludoArrow = () => {
+                console.log("Hola arrow function");
+        } */
+
+        /* Cuando tiene una sola expresion de retorno */
+        const saludoArrow = () => console.log("Hello arrow function");
+        const prueba = nombre => console.log(`Hola ${nombre}`);
+
+        //saludoArrow();
+        //prueba('Julia');
+
+        /* const sumar = function(a,b) {
+                return a + b;
+        } */
+        /* arrow function with implicit return */
+        const sumar = (a,b) => a + b;
+
+        //console.log(sumar(8,9));
+        /* funcion de varias lineas con arrow funcionts */
+        const funcionDeVariasLineas = () => {
+                console.log("Uno");
+                console.log("Dos");
+                console.log("Tres");
+        }
+        //funcionDeVariasLineas();
+
+        /* OTROS EJEMPLOS CON ARROW FUNCTIONS */
+
+        numeros = [1,2,3,4,5];
+
+        /* Without arrow functions */
+        /* numeros.forEach(function (el,index) {
+                console.log(`${el} esta en la posicion ${index}`);
+        } ); */
+
+        /* with Arrow functions */
+        numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+
+
+
+
+        
 
     </script>
 </body>
