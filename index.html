@@ -1,322 +1,494 @@
-<html> 
+<html>
+
 <head>
 </head>
+
 <body>
-    <h1>Este es mi primera prueba en github page</h1>
-    <h2>Este es otro encabezado</h2>
-    <script>
-        //const PI=3.14;
-        //console.log(PI);
-        /* const PI=3.1416;
-        console.log(PI);
-
-        const objeto = {
-            nombre:'juan',
-            edad:24,
-        }
-        console.log(objeto);
-        const colores = ["rojo","verde","azul"];
-        console.log(colores);
-
-        objeto.correo = "example@example.com"
-        console.log(objeto);
-
-        colores.push("violeta");
-        console.log(colores);
-    
- */       //Concatenacion de cadenas de texto tipo string.
-/*         let nombre = "Juan";
-        let apellido = "Suarez";
-
-        let saludo = "Hola buenos dias" + " " + nombre + " " + apellido;
-        console.log(saludo);
-
-        let ul = `hola este es
-        una prueba de
-        interpolacion en javascript`; 
-        console.log(ul);
-
-        let ol = `
-        este es otra prueba
-        de interpolacion de 
-        Javascript`
-        console.log(ol) */
-
-        /* NUMEROS */
-/*         let a = 2;
-        let b = new Number(1);
-        let c = 7.19; */
-
-/*         console.log(a)
-        console.log(b) */
-        /* Cantidad de numeros decimales (toFixed(#decimales)) */
-        /* Redondea de acuerdo al numero de digitos que le pongas */
-/*         console.log(c.toFixed(1)) */
-        /* Añade ceros para llegar a la cantidad de decimales dadas */
-/*         console.log(c.toFixed(5)) */
-        /* Filtrar solo la parte entera del numero */
-/*     console.log(parseInt(c)) */
-        /* Filtrar solo la parte flotante del numero */
-/*         console.log(parseFloat(c)) */
-
-        /* Utilizando el objeto Number para transformar un objeto Date */        
-/*         var d = new String("12.4");
-        console.log(Number(d)); */
-        /* VALORES BOOLEANOS */
-/*         let verdadero = true;
-        let falso = false; */
-        /* Constructor Boolean */
-/*         let v = Boolean(true);
-        let f = Boolean(false);
-
-        console.log(verdadero, falso, v, f); */
-        /* typeof: te muestra el tipo de dato */
-        console.log(typeof verdadero, typeof falso);
-        /* Valores que tienden a true: truthy */
-        console.log(Boolean(" "))
-        console.log(Boolean(-7))
-        console.log(Boolean({}))
-        /* Valores que tienden a false */
-        console.log(Boolean(NaN))
-        console.log(Boolean(undefined))
-        console.log(Boolean(-0))
-        /* VALORES PRIMITIVOS */
-        /* Cuando no defines tu variable (undefined) */
-        let indefinida;
-        console.log(indefinida)
-        /* La variable esta vacia intencionalmente */
-        let nulo=null;
-        console.log(nulo);
-        /* NaN - Not a Number */
-        let noEsUnNumero = "Hola"*3.7;
-        console.log(noEsUnNumero);
-        /* FUNCIONES */
-        /* funcion declarada */
-        /* No recibe valores ni retorna valores */
-        function estoEsUnaFuncion() {
-            console.log("Uno");
-            console.log("Dos");
-            console.log("Tres");
-        }
-        /* Invocacion de la funcion */
-        estoEsUnaFuncion();
-        /* ARREGLOS */
-        console.log("========== Arreglos ==========")
-        const arreglo = [];
-        const arreglob = [1, true, "Hola", ["A", "B", "C", [1,"boom",false]]];
-        console.log(arreglob);
-        console.log(arreglo);
-        console.log(arreglob.length);
-        console.log(arreglob[2]);
-        console.log(arreglob[3][3][2]);
-        /* Otras formas de construir arreglos */
-        const arregloC = Array.of("A",false, 2, ["boom", 2, true]);
-        console.log(arregloC);
-
-        const arregloD = Array(100).fill(true);
-        console.log(arregloD);
-
-        const arregloE = new Array("Hola", true, 1, ["boom", false, 3]);
-        console.log(arregloE);
-        /* Metodos de los arreglos */
-        const colores = ["blue", "red", "green"];
-        console.log(colores);
-
-        colores.push("black");
-        console.log(colores);
-
-        colores.pop();
-        console.log(colores);
+        <h1>Este es mi primera prueba en github page</h1>
+        <h2>Este es otro encabezado</h2>
+        <script>
+                //const PI=3.14;
+                //console.log(PI);
+                /* const PI=3.1416;
+                console.log(PI);
         
-        colores.forEach(function(el,i) {
-            console.log(el, i);
-            /* interpolacion */
-            console.log(`<h> ${el} </h>`)
-        })
-        /* OBJETOS BASICO */
-/*         console.log("=========== Objetos ===========");
-        const objetoUno = {}
-        console.log(objetoUno)
-
-        const objetoDos = new Object()
-        console.log(objetoDos)
-
-        let persona = {
-                nombre:"Jon",
-                apellido:"Escobar",
-                soltero:false,
-                asignaturas:["matematicas","literatura","comunicacion"],
-                contacto:{
-                        correo:"example@example.com",
-                        twiter:"@example",
-                },
-                saludo: function(){
-                        return "Hello world!!!";
-                },
-                contestar: function(){
-                        console.log("He contestado");
-                },
-                mensaje: function(){
-                        console.log(`Hola mi nombre es ${this.nombre} y mi apellido es ${this.apellido}, me gusta la asignatura de las ${this.asignaturas[0]}`)
+                const objeto = {
+                    nombre:'juan',
+                    edad:24,
                 }
-        }
-        console.log(persona["nombre"]);
-        console.log(persona["apellido"]);
-        console.log(persona.nombre);
-        console.log(persona.apellido);
-        console.log(persona.asignaturas[0]);
-        console.log(persona.contacto.correo);
-        console.log(persona.contacto.twiter);
-        console.log(persona.saludo());
-        persona.contestar();
-        persona.mensaje(); */
-        /* DIFERENCIA ENTRE (===/!==) Y (==/!=) */
-/*         let variable = 3.0;
-        let variableString = "3.0";
-        console.log(typeof variable);
-        console.log(typeof variableString);
-        console.log(3 === "3.0");
-        console.log(3 == "3.0"); */
-        /* CONDICIONAL IF...ELSE */
-/*         let queso = "hai";
-
-        if (queso){
-                console.log('¡Siii! Hay queso para hacer tostadas con queso.');
-        }else{
-                console.log('No hay tostadas con queso para ti hoy :(.')
-        } */
-        /* Anidando if...else */
-        /* eleccion = 'soleado';
-        temperatura = 85;
-        if (eleccion === 'soleado'){
-                if (temperatura < 86){
-                        console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
-                }else if (temperatura >= 86){
-                        console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
-                }
-        }
+                console.log(objeto);
+                const colores = ["rojo","verde","azul"];
+                console.log(colores);
         
-        if (eleccion === 'soleado' && temperatura < 86){
-                console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
-        } else if (eleccion === 'soleado' || temperatura >= 86){
-                console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
-        } */
-
-        /* Bucle for */
-
-        let numeros = [1,2,3,4,5,6,7,8,9,0];
-
-        console.log("===== break =====");
-        for (let k=0; k < 10; k++){
-                if (numeros[k] === 6){
-                        break;
-                        console.log("El valor que tengo es 6")
-                }
-                console.log(numeros[k])
-        }
-
-        console.log("===== continue =====");
-        for (let k=0; k < 10; k++){
-                if (numeros[k] === 6){
-                        console.log("El valor que tengo es 6")
-                        continue;
-                }
-                console.log(numeros[k])
-        }
-        console.clear();
-
-        /* Remember functions */
-        /* Funcion declarada */
-        function estoEsUnaFuncion() {
-                console.log("Uno");
-                console.log("Dos");
-                console.log("Tres");
-        }
-        //Invocacion de la funcion
-        //estoEsUnaFuncion();
-
-        function devuelveValor() {
-                console.log("Uno");
-                console.log("Dos");
-                return 19;
-                console.log("Tres");
-
-                return "Retorna cadena de texto";
+                objeto.correo = "example@example.com"
+                console.log(objeto);
+        
+                colores.push("violeta");
+                console.log(colores);
+            
+         */       //Concatenacion de cadenas de texto tipo string.
+                /*         let nombre = "Juan";
+                        let apellido = "Suarez";
                 
-        }
-        //let valor = devuelveValor();
-        //console.log(valor);
+                        let saludo = "Hola buenos dias" + " " + nombre + " " + apellido;
+                        console.log(saludo);
+                
+                        let ul = `hola este es
+                        una prueba de
+                        interpolacion en javascript`; 
+                        console.log(ul);
+                
+                        let ol = `
+                        este es otra prueba
+                        de interpolacion de 
+                        Javascript`
+                        console.log(ol) */
 
-        function saludar(nombre="desconocido", edad=0) {
-                console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
-        }
-        //saludar("Kenai",7);
-        //saludar();
+                /* NUMEROS */
+                /*         let a = 2;
+                        let b = new Number(1);
+                        let c = 7.19; */
 
-        // Funciones declaradas VS funciones expresadas.
-        //funcionDeclarada();
-        function funcionDeclarada() {
-                console.log("este es una funcion declarada, puede invocarse en calquier parte de vuestro codigo, incluso antes");
-        }
-        //funcionDeclarada();
+                /*         console.log(a)
+                        console.log(b) */
+                /* Cantidad de numeros decimales (toFixed(#decimales)) */
+                /* Redondea de acuerdo al numero de digitos que le pongas */
+                /*         console.log(c.toFixed(1)) */
+                /* Añade ceros para llegar a la cantidad de decimales dadas */
+                /*         console.log(c.toFixed(5)) */
+                /* Filtrar solo la parte entera del numero */
+                /*     console.log(parseInt(c)) */
+                /* Filtrar solo la parte flotante del numero */
+                /*         console.log(parseFloat(c)) */
 
-        /* FUNCIONES EXPRESADAS */
-        /* funcion anonima - sin nombre */
-        //funcionExpresada();
-        const funcionExpresada = function() {
-                console.log("Esto es una funcion expresada, se le asignada como valor a una variable, si invocamos esta funcion antes de su definicion js nos dira ...");
-        }
-        funcionExpresada();
+                /* Utilizando el objeto Number para transformar un objeto Date */
+                /*         var d = new String("12.4");
+                        console.log(Number(d)); */
+                /* VALORES BOOLEANOS */
+                /*         let verdadero = true;
+                        let falso = false; */
+                /* Constructor Boolean */
+                /*         let v = Boolean(true);
+                        let f = Boolean(false);
+                
+                        console.log(verdadero, falso, v, f); */
+                /* typeof: te muestra el tipo de dato */
+                console.log(typeof verdadero, typeof falso);
+                /* Valores que tienden a true: truthy */
+                console.log(Boolean(" "))
+                console.log(Boolean(-7))
+                console.log(Boolean({}))
+                /* Valores que tienden a false */
+                console.log(Boolean(NaN))
+                console.log(Boolean(undefined))
+                console.log(Boolean(-0))
+                /* VALORES PRIMITIVOS */
+                /* Cuando no defines tu variable (undefined) */
+                let indefinida;
+                console.log(indefinida)
+                /* La variable esta vacia intencionalmente */
+                let nulo = null;
+                console.log(nulo);
+                /* NaN - Not a Number */
+                let noEsUnNumero = "Hola" * 3.7;
+                console.log(noEsUnNumero);
+                /* FUNCIONES */
+                /* funcion declarada */
+                /* No recibe valores ni retorna valores */
+                function estoEsUnaFuncion() {
+                        console.log("Uno");
+                        console.log("Dos");
+                        console.log("Tres");
+                }
+                /* Invocacion de la funcion */
+                estoEsUnaFuncion();
+                /* ARREGLOS */
+                console.log("========== Arreglos ==========")
+                const arreglo = [];
+                const arreglob = [1, true, "Hola", ["A", "B", "C", [1, "boom", false]]];
+                console.log(arreglob);
+                console.log(arreglo);
+                console.log(arreglob.length);
+                console.log(arreglob[2]);
+                console.log(arreglob[3][3][2]);
+                /* Otras formas de construir arreglos */
+                const arregloC = Array.of("A", false, 2, ["boom", 2, true]);
+                console.log(arregloC);
 
-        const saludo = function () {
-                console.log("Hola");
-        }
-        saludo();
+                const arregloD = Array(100).fill(true);
+                console.log(arregloD);
 
-        /* Arrow function -> otra forma de declarar una funcion expresadad anonima  */
-        /* const saludoArrow = () => {
-                console.log("Hola arrow function");
-        } */
+                const arregloE = new Array("Hola", true, 1, ["boom", false, 3]);
+                console.log(arregloE);
+                /* Metodos de los arreglos */
+                const colores = ["blue", "red", "green"];
+                console.log(colores);
 
-        /* Cuando tiene una sola expresion de retorno */
-        const saludoArrow = () => console.log("Hello arrow function");
-        const prueba = nombre => console.log(`Hola ${nombre}`);
+                colores.push("black");
+                console.log(colores);
 
-        //saludoArrow();
-        //prueba('Julia');
+                colores.pop();
+                console.log(colores);
 
-        /* const sumar = function(a,b) {
-                return a + b;
-        } */
-        /* arrow function with implicit return */
-        const sumar = (a,b) => a + b;
+                colores.forEach(function (el, i) {
+                        console.log(el, i);
+                        /* interpolacion */
+                        console.log(`<h> ${el} </h>`)
+                })
+                /* OBJETOS BASICO */
+                /*         console.log("=========== Objetos ===========");
+                        const objetoUno = {}
+                        console.log(objetoUno)
+                
+                        const objetoDos = new Object()
+                        console.log(objetoDos)
+                
+                        let persona = {
+                                nombre:"Jon",
+                                apellido:"Escobar",
+                                soltero:false,
+                                asignaturas:["matematicas","literatura","comunicacion"],
+                                contacto:{
+                                        correo:"example@example.com",
+                                        twiter:"@example",
+                                },
+                                saludo: function(){
+                                        return "Hello world!!!";
+                                },
+                                contestar: function(){
+                                        console.log("He contestado");
+                                },
+                                mensaje: function(){
+                                        console.log(`Hola mi nombre es ${this.nombre} y mi apellido es ${this.apellido}, me gusta la asignatura de las ${this.asignaturas[0]}`)
+                                }
+                        }
+                        console.log(persona["nombre"]);
+                        console.log(persona["apellido"]);
+                        console.log(persona.nombre);
+                        console.log(persona.apellido);
+                        console.log(persona.asignaturas[0]);
+                        console.log(persona.contacto.correo);
+                        console.log(persona.contacto.twiter);
+                        console.log(persona.saludo());
+                        persona.contestar();
+                        persona.mensaje(); */
+                /* DIFERENCIA ENTRE (===/!==) Y (==/!=) */
+                /*         let variable = 3.0;
+                        let variableString = "3.0";
+                        console.log(typeof variable);
+                        console.log(typeof variableString);
+                        console.log(3 === "3.0");
+                        console.log(3 == "3.0"); */
+                /* CONDICIONAL IF...ELSE */
+                /*         let queso = "hai";
+                
+                        if (queso){
+                                console.log('¡Siii! Hay queso para hacer tostadas con queso.');
+                        }else{
+                                console.log('No hay tostadas con queso para ti hoy :(.')
+                        } */
+                /* Anidando if...else */
+                /* eleccion = 'soleado';
+                temperatura = 85;
+                if (eleccion === 'soleado'){
+                        if (temperatura < 86){
+                                console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
+                        }else if (temperatura >= 86){
+                                console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
+                        }
+                }
+                
+                if (eleccion === 'soleado' && temperatura < 86){
+                        console.log("Esta a " + temperatura + " grados afuera - agradable y soleado. Vamos a la playa, o al parque, y comer helado.")
+                } else if (eleccion === 'soleado' || temperatura >= 86){
+                        console.log("Esta a " + temperatura + " grados afuera - ¡QUE CALOR! Si deseas salir, asegurate de aplicar bloqueador solar.")
+                } */
 
-        //console.log(sumar(8,9));
-        /* funcion de varias lineas con arrow funcionts */
-        const funcionDeVariasLineas = () => {
-                console.log("Uno");
-                console.log("Dos");
-                console.log("Tres");
-        }
-        //funcionDeVariasLineas();
+                /* Bucle for */
 
-        /* OTROS EJEMPLOS CON ARROW FUNCTIONS */
+                let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-        numeros = [1,2,3,4,5];
+                console.log("===== break =====");
+                for (let k = 0; k < 10; k++) {
+                        if (numeros[k] === 6) {
+                                break;
+                                console.log("El valor que tengo es 6")
+                        }
+                        console.log(numeros[k])
+                }
 
-        /* Without arrow functions */
-        /* numeros.forEach(function (el,index) {
-                console.log(`${el} esta en la posicion ${index}`);
-        } ); */
+                console.log("===== continue =====");
+                for (let k = 0; k < 10; k++) {
+                        if (numeros[k] === 6) {
+                                console.log("El valor que tengo es 6")
+                                continue;
+                        }
+                        console.log(numeros[k])
+                }
+                console.clear();
 
-        /* with Arrow functions */
-        numeros.forEach((el,index) => console.log(`${el} esta en la posicion ${index}`));
+                /* Remember functions */
+                /* Funcion declarada */
+                function estoEsUnaFuncion() {
+                        console.log("Uno");
+                        console.log("Dos");
+                        console.log("Tres");
+                }
+                //Invocacion de la funcion
+                //estoEsUnaFuncion();
+
+                function devuelveValor() {
+                        console.log("Uno");
+                        console.log("Dos");
+                        return 19;
+                        console.log("Tres");
+
+                        return "Retorna cadena de texto";
+
+                }
+                //let valor = devuelveValor();
+                //console.log(valor);
+
+                function saludar(nombre = "desconocido", edad = 0) {
+                        console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+                }
+                //saludar("Kenai",7);
+                //saludar();
+
+                // Funciones declaradas VS funciones expresadas.
+                //funcionDeclarada();
+                function funcionDeclarada() {
+                        console.log("este es una funcion declarada, puede invocarse en calquier parte de vuestro codigo, incluso antes");
+                }
+                //funcionDeclarada();
+
+                /* FUNCIONES EXPRESADAS */
+                /* funcion anonima - sin nombre */
+                //funcionExpresada();
+                const funcionExpresada = function () {
+                        console.log("Esto es una funcion expresada, se le asignada como valor a una variable, si invocamos esta funcion antes de su definicion js nos dira ...");
+                }
+                funcionExpresada();
+
+                const saludo = function () {
+                        console.log("Hola");
+                }
+                saludo();
+
+                /* Arrow function -> otra forma de declarar una funcion expresadad anonima  */
+                /* const saludoArrow = () => {
+                        console.log("Hola arrow function");
+                } */
+
+                /* Cuando tiene una sola expresion de retorno */
+                const saludoArrow = () => console.log("Hello arrow function");
+                const prueba = nombre => console.log(`Hola ${nombre}`);
+
+                //saludoArrow();
+                //prueba('Julia');
+
+                /* const sumar = function(a,b) {
+                        return a + b;
+                } */
+                /* arrow function with implicit return */
+                const sumar = (a, b) => a + b;
+
+                //console.log(sumar(8,9));
+                /* funcion de varias lineas con arrow funcionts */
+                const funcionDeVariasLineas = () => {
+                        console.log("Uno");
+                        console.log("Dos");
+                        console.log("Tres");
+                }
+                //funcionDeVariasLineas();
+
+                /* OTROS EJEMPLOS CON ARROW FUNCTIONS */
+
+                numeros = [1, 2, 3, 4, 5];
+
+                /* Without arrow functions */
+                /* numeros.forEach(function (el,index) {
+                        console.log(`${el} esta en la posicion ${index}`);
+                } ); */
+
+                /* with Arrow functions */
+                numeros.forEach((el, index) => console.log(`${el} esta en la posicion ${index}`));
+
+                /* Ejecicio de logica de programacion - arrays */
+                /* Programa una funcion que dado un arreglo de numeros devuelve un objeto con dos arreglos, el 
+                primero tendra los nuemros ordenados en forma ascendente y el segundo de descendente. pe. 
+                miFuncion([7,5,7,8,9]) devolvera (asc: [5,6,7,7,8], desc: [8,7,7,6,5]) */
+                console.clear();
+                const ordenarArreglo = (arr = undefined) => {
+                        if (arr === undefined) return console.warn("No ingesaste un arreglo de numeros");
+
+                        if (!(arr instanceof Array)) return console.error("El valor que ingresaste no es un numero");
+
+                        if (arr.length === 0) return console.error("El arreglo esta vacio");
+
+                        for (let num of arr) {
+                                if (typeof num !== "number") return console.error(`El valor "${num}" ingresado, NO es un numero `);
+                        }
+
+                        return console.info({
+                                arr,
+                                asc: arr.map(el => el).sort(),
+                                desc: arr.map(el => el).sort().reverse(),
+                        });
+                }
+                //ordenarArreglo();
+                //ordenarArreglo("Hola");
+                //ordenarArreglo([]);
+                //ordenarArreglo([3,{}]);
+                //ordenarArreglo([7,5,7,8,9]);
 
 
 
 
-        
 
-    </script>
+                /* Programa una funcion que dado un arreglo de elementos, elimine los duplicados. pe. 
+                miFuncion(["x",10,"x",2,"10",10,true,true]) devolvera ["x",10,2,"10",true]*/
+
+                const quitarDuplicados = (arr=undefined) => {
+                        if (arr === undefined) return console.warn("No ingesaste un arreglo de numeros");
+
+                        if (!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo");
+
+                        if (arr.length === 0) return console.error("El arreglo esta vacio");
+
+                        if (arr.length === 1) return console.warn("El arreglo debe tener al menos 2 elementos");
+
+                        /* primera forma */
+                        /* return console.info({
+                                original:arr,
+                                sinDuplicidad:arr.filter((value, index, self) => self.indexOf(value) === index),
+                        }); */
+                        
+                        /* segunda forma - set(nuevo tipo de dato) */
+                        return console.info({
+                                original:arr,
+                                sinDuplicidad: [... new Set(arr)],
+                        });
+                        
+                }
+                //quitarDuplicados();
+                //quitarDuplicados({});
+                //quitarDuplicados([]);
+                //quitarDuplicados([2]);
+                //quitarDuplicados(["x",10,"x",2,"10",10,true,true]);
+
+
+
+
+
+                /* Programa una funcion que dado un arreglo de numeros obtenga el promedio, pe. 
+                promedio([9,8,7,6,5,4,3,2,1,0]) devolvera 4.5 */
+                const promedio = (arr=undefined) => {
+                        if (arr === undefined) return console.warn("No ingesaste un arreglo de numeros");
+
+                        if (!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo");
+
+                        if (arr.length === 0) return console.error("El arreglo esta vacio");
+
+                        for (let num of arr) {
+                                if (typeof num !== "number") return console.error(`El valor "${num}" ingresado, NO es un numero `);
+                        }
+                        return console.info(
+                                arr.reduce((total, num, index, arr) => {
+                                        total += num;
+                                        if (index === arr.length-1) {
+                                                return `El promedio de ${arr.join(" + ")} es ${total/arr.length}`;
+                                        } else {
+                                                return total;
+                                        }
+                                })
+                        );
+                }
+                //promedio();
+                //promedio({});
+                //promedio([]);
+                //promedio([2,true]);
+                //promedio([9,8,7,6,5,4,3,2,1,0]);
+
+
+
+
+
+                /* Programa una clase llamada Pelicula. La clase recibira un objeto al momento de instanciarse con los siguientes datos: id de la pelicula en IMDB, titulo, director, año de estreno, pais o paises de origen, generos y calificacion en IMDB.
+                        - Todos los datos del objeto son obligatorios.
+                        - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes numeros.
+                        - Valida que el titulo no rebase los 100 caracteres. 
+                        - Valida que el director no rebase los 50 caracteres.
+                        - Valida que el año de estreno sea un numero entero de 4 digitos.   
+                        - Valida qu el pais o paises sea introducido en forma de arreglo.
+                        - Valida que los generos sean introducidos en forma de arreglo.
+                        - Valida que los generos introducidos esten dentro de los generos aceptados*.
+                        
+                        - Crea un metodo estatico que devuelve los generos aceptados*.
+                        - Valida que la calificacion sea un numero entre 0 y 10 pudiendo ser decimal de una posicion.
+                        - Crea un metodo que devuelve toda la ficha tecnica de la pelicula.
+                        - Apartir de un arreglo con la informacion de 3 peliculas genera 3 instancias de la clase de forma automatizada e imprime la ficha tecnica de cada pelicula.
+
+                * Generos aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime,Documentary, Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport,Talk-Show, Thriller, Western.
+                */
+                
+                class Pelicula {
+                        constructor({id, titulo, director, estreno, pais, generos, calificacion}) {
+                                this.id = id;
+                                this.titulo = titulo;
+                                this.director = director;
+                                this.estreno = estreno;
+                                this.pais = pais;
+                                this.generos = generos;
+                                this.calificacion = calificacion;
+
+                                this.validarIMDB(id);
+                                this.validarTitulo(titulo);
+                                this.validarDirector(director);
+                        }
+
+                        validarCadena (propiedad, valor) {
+                                if (!valor) return console.warn(`${propiedad} "${valor}" esta vacio`);
+
+                                if (typeof valor !== "string") return console.error(`${propiedad} "${valor}" ingresado, NO es una cadena de texto`);
+
+                                return true;
+                        }
+
+                        validarLongitudCadena(propiedad, valor, longitud) {
+                                if (valor.length > longitud) return console.error(`${propiedad} "${valor}" excede el numero de caracteres permitidos (${longitud})`);
+
+                                return true;
+                        }
+
+                        validarIMDB (id) {
+                                if (this.validarCadena("IMDB id",id)) {
+                                        if (!(/^([a-z]){2}([0-9]){7}$/.test(id))) return console.error(`IMDB id "${id}" no es valida, debe tener 9 caracteres, los dos primeros letras minusculas, los 7 restantes numeros.`);
+                                }
+                        }
+
+                        validarTitulo (titulo) {
+                                if (this.validarCadena("Titulo",titulo)) this.validarLongitudCadena("Titulo", titulo, 100); 
+                        }
+
+                        validarDirector (director) {
+                                if (this.validarCadena("Director",director)) this.validarLongitudCadena("Director", director, 50); 
+                        }
+
+                }
+
+                const peli = new Pelicula({
+                        id: "tt1234567",
+                        titulo:"Titulo de la pelicula",
+                        titulo:"Director de la pelicula",
+                });
+
+
+
+
+
+
+        </script>
 </body>
+
 </html>
