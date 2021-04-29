@@ -51,15 +51,53 @@
 
         const mimi = new Animal("Mimi", "Hembra"), scooby = new Perro("Scooby", "Macho", "Gigante");
 
-        console.log(mimi);
-        mimi.saludar();
-        mimi.sonar();
-        console.log(scooby);
-        scooby.saludar();
-        scooby.sonar();
-        scooby.ladrar();
+        //console.log(mimi);
+        //mimi.saludar();
+        //mimi.sonar();
+        //console.log(scooby);
+        //scooby.saludar();
+        //scooby.sonar();
+        //scooby.ladrar();
 
 
+        /* review nmero mayor */
+        function obtNumber(array = []) {
+                var numMayor = 0
+                array.forEach((item) => {
+                    if (item > numMayor) {
+                        //item = item + 1
+                        numMayor = item
+                    }
+                })
+                return numMayor
+            }
+        
+        //console.log(obtNumber([2,34,67,12,4,43,68]));
+        //console.log(obtNumber([91,63,98]));
+        //obtNumber([91,63,98]);
+
+        /* Nombre del estudiante con el escore mas alto */
+        let mayorScore = {};
+        let mayor = 0;
+        let indMayor = 0;
+        let mayorRanking = [];
+        let entrada = [{name:"Yossi", score:91}, {name:"Avi", score:98}, {name:"Ariel", score:98}]
+        function obtScore(array = []) {
+            array.forEach((item,index) => {
+                //console.log("escores: ",item.score);
+                //console.log("Indice: ", index);
+                if (item.score > mayor) {
+                    mayor = item.score;
+                    indMayor = index;
+                    //mayorRanking.push()
+                    //console.log(mayor);
+                }
+            })
+            //console.log(mayor,indiceMayor);
+            return array[indMayor].name;
+        }
+        console.log(obtScore(entrada));
+        //obtScore(entrada);
 
 
 

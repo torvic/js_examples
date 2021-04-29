@@ -449,6 +449,7 @@
                                 this.validarEstreno(estreno);
                                 this.validarPais(pais);
                                 this.validarGeneros(generos);
+                                this.validarCalificacion(calificacion);
                         }
 
                         static get listaGeneros () {
@@ -528,18 +529,65 @@
                                         }
                                 }
                         }
+
+                        validarCalificacion (calificacion) {
+                                if (this.validarNumero("Calificacion", calificacion)) {
+                                        return (calificacion < 0 || calificacion > 10)
+                                        ? console.error(`La calificacion tiene que estar en un rango entre 0 y 10`) 
+                                        : this.calificacion = calificacion.toFixed(1);
+                                }
+                        }
+
+                        fichaTecnica() {
+                                console.info(`Ficha Tecnica:\ntitulo: "${this.titulo}"\nDirector: "${this.director}"\nAño: "${this.estreno}"\nPais: "${this.pais.join("-")}"\nGeneros: "${this.generos.join(", ")}"\nCalificacion: "${this.calificacion}"\nIMDB id: "${this.id}"`);
+                        }
                 }
 
                 //Pelicula.generosAceptados();
 
-                const peli = new Pelicula({
+                /* const peli = new Pelicula({
                         id: "tt1234567",
                         titulo:"Titulo de la pelicula",
                         director:"Director de la pelicula",
                         estreno:2020,
                         pais: ["mexico"],
-                        generos: ["Comedy", "Hola", "Drama"],
+                        generos: ["Comedy", "Drama"],
+                        calificacion: 7.988,
                 });
+                peli.fichaTecnica(); */
+
+                const misPelis = [
+                        {
+                                id: "tt0758758",
+                                titulo: "Into the wild",
+                                director: "Sean Penn",
+                                estreno: 2007,
+                                pais: ["USA"],
+                                generos: ["Adventure", "Biography", "Drama"],
+                                calificacion: 8.1,
+                        },
+                        {
+                                id: "tt1234567",
+                                titulo: "Titulo de la pelicula",
+                                director: "Director de la pelicula",
+                                estreno: 2020,
+                                pais: ["mexico"],
+                                generos: ["Comedy", "Drama"],
+                                calificacion: 7.988,
+                        },
+                        {
+                                id: "tt1234567",
+                                titulo: "Titulo de la pelicula",
+                                director: "Director de la pelicula",
+                                estreno: 2020,
+                                pais: ["mexico"],
+                                generos: ["Comedy", "Drama"],
+                                calificacion: 7.988,
+                        }
+                ]
+
+                //misPelis.forEach(el => new Pelicula(el).fichaTecnica());
+
 
 
 
