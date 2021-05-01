@@ -93,7 +93,7 @@
 
 
         /* Map */
-        let mapa = new Map();
+        /* let mapa = new Map();
         mapa.set("nombre","jon");
         mapa.set("apellido","Mircha");
         mapa.set("edad", 35);
@@ -130,7 +130,113 @@
         const valoresMapa2 = [...map2.values()];
 
         console.log(llavesMapa2);
-        console.log(valoresMapa2);
+        console.log(valoresMapa2); */
+
+
+
+
+
+
+        /* WeakSet and WeakMap */
+        //const ws = new WeakSet([1,2,3,true,true,false]);
+        /* const ws = new WeakSet();
+    
+        let valor1 = {"valor1": 1};
+        let valor2 = {"valor2": 2};
+        let valor3 = {"valor3": 3};
+
+        ws.add(valor1);
+        ws.add(valor2);
+
+        console.log(ws);
+
+        console.log(ws.has(valor1));
+        console.log(ws.has(valor3));
+
+        ws.delete(valor2);
+        console.log(ws);
+
+        ws.delete(valor2);
+        ws.delete(valor3);
+
+        setInterval(() => {
+            console.log(ws);
+        }, 1000);
+
+        setTimeout(() => {
+            valor1 = null;
+            valor2 = null;
+            valor3 = null;
+        }, 5000); */
+
+        /* const wm = new WeakMap([
+            ["nombre", "kenai"],
+            ["edad", 4],
+            ["animal", "perro"],
+        ]); */
+        /* const wm = new WeakMap();
+        let llave1 = {};
+        let llave2 = {};
+        let llave3 = {};
+
+        wm.set(llave1, 1);
+        wm.set(llave2, 2);
+        
+        console.log(wm);
+
+        console.log(wm.has(llave1));
+        console.log(wm.has(llave3));
+
+        console.log(wm.get(llave1));
+        console.log(wm.get(llave2));
+        console.log(wm.get(llave3));
+
+        wm.delete(llave1);
+        console.log(wm);
+
+        wm.set(llave1,1);
+        wm.set(llave3,3);
+        console.log(wm);
+
+        setInterval(() => {
+            console.log(wm);
+        }, 1000);
+
+        setTimeout(() => {
+            llave1 = null;
+            llave2 = null;
+            llave3 = null;
+        }, 5000); */
+
+
+
+
+
+
+        /* Iterables & iterators */
+        //const iterable = [1,2,3,4,5];
+        //Accedemos al iterador del iterable
+        //const iterador = iterable[Symbol.iterator]();
+
+        //console.log(iterable);
+        //console.log(iterador);
+        //console.log(iterador.next());
+        //console.log(iterador.next());
+        //console.log(iterador.next());
+        //console.log(iterador.next());
+        //console.log(iterador.next());
+        //console.log(iterador.next());
+
+        /* let next = iterador.next();
+
+        while (!next.done) {
+            console.log(next.value);
+            next = iterador.next();
+        } */
+
+
+
+
 
 
         
