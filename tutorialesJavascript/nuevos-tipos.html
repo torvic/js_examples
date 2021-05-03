@@ -344,7 +344,7 @@
 
 
         /* This */
-        console.log(this);
+        /* console.log(this);
         console.log(window);
         console.log(this === window);
 
@@ -374,7 +374,7 @@
             nombre: "Contexto objeto 3",
             imprimir: () => console.log(this.nombre)
         };
-        obj3.imprimir();
+        obj3.imprimir(); */
 
         function Persona(nombre) {
             const that = this;
@@ -388,9 +388,90 @@
                 console.log(that.nombre, 22);
             };
         }
-        let jon = new Persona("Jon");
-        jon();
+        /* let jon = new Persona("Jon");
+        jon(); */
 
+
+
+
+
+        /* call, apply, bind */
+        /* console.log(this);
+        this.lugar = "Contexto global"
+
+        function saludar(saludo, aQuien) {
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        }
+        saludar("hola","kira");
+
+        const obj = {
+            lugar: "Context objeto",
+        };
+
+        this.nombre = "Window";
+
+        saludar.call(obj, "hola", "Jon");
+        saludar.call(null, "hola", "Jon");
+        saludar.call(this, "hola", "Jon");
+        saludar.apply(obj, ["adios", "pop"]);
+        saludar.apply(null, ["adios", "pop"]);
+        saludar.apply(this, ["adios", "pop"]);
+
+        const persona = {
+            nombre: "Jon",
+            saludar: function() {
+                console.log(`Hola ${this.nombre}`);
+            }
+        };
+        persona.saludar();
+
+        const otraPersona = {
+            saludar: persona.saludar.bind(this)
+        };
+        otraPersona.saludar(); */
+
+
+
+
+
+
+        /* Json */
+        const json = {
+            cadena: "Ever",
+            numero: 35,
+            booleano: true,
+            arreglo: ["correr", "programar", "cocinar"],
+            objeto: {
+                twitter: "@ever",
+                email: "ever@gmail.com",
+            },
+            nulo: null
+        };
+
+        console.log(json);
+        console.log(JSON);
+        console.log("{}");
+        console.log("[1,2,3]");
+        console.log(JSON.parse("{}"));
+        console.log(JSON.parse("[1,2,3]"));
+        console.log(JSON.parse("true"));
+        console.log(JSON.parse("false"));
+        console.log(JSON.parse("19"));
+        //console.log(JSON.parse("Hola mundo"));
+        console.log(JSON.parse("null"));
+        //console.log(JSON.parse("undefined"));
+
+        console.log(JSON.stringify({}));
+        console.log(JSON.stringify([1,2,3]));
+        console.log(JSON.stringify(true));
+        console.log(JSON.stringify(false));
+        console.log(JSON.stringify(19));
+        console.log(JSON.stringify(null));
+        console.log(JSON.stringify(undefined));
+        console.log(JSON.stringify({y:2,x:3}));
+
+        console.log(JSON.stringify(json));
+        console.log(JSON.parse('{"cadena":"Ever","numero":35,"booleano":true,"arreglo":["correr","programar","cocinar"],"objeto":{"twitter":"@ever","email":"ever@gmail.com"},"nulo":null}'));
 
 
 
