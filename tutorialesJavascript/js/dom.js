@@ -96,7 +96,7 @@ console.log($linkDOM.hasAttribute("data-id")); */
 
 
 /* Estilos y variables CSS */
-const $linkDOM = document.querySelector(".link-dom");
+/* const $linkDOM = document.querySelector(".link-dom");
 
 console.log($linkDOM);
 console.log($linkDOM.style);
@@ -116,9 +116,39 @@ $linkDOM.style.borderRadius = ".5rem";
 
 console.log($linkDOM.style);
 console.log($linkDOM.getAttribute("style"));
-console.log(window.getComputedStyle($linkDOM));
+console.log(window.getComputedStyle($linkDOM)); */
 
 //variable CSS - Custom Properties CSS
+
+
+
+
+
+/* clases CSS */
+const $card = document.querySelector(".card");
+
+console.log($card);
+console.log($card.className);
+console.log($card.classList);
+console.log($card.classList.contains("rotate-45"));
+$card.classList.add("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.remove("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+$card.classList.replace("rotate-45", "rotate-135");
+$card.classList.add("opacity-80","sepia");
+$card.classList.remove("opacity-80","sepia");
+$card.classList.toggle("sepia", "opacity-80");
+
+
+
+
+
 
 
 
