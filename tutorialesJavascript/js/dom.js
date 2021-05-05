@@ -125,7 +125,7 @@ console.log(window.getComputedStyle($linkDOM)); */
 
 
 /* clases CSS */
-const $card = document.querySelector(".card");
+/* const $card = document.querySelector(".card");
 
 console.log($card);
 console.log($card.className);
@@ -143,7 +143,52 @@ $card.classList.toggle("rotate-45");
 $card.classList.replace("rotate-45", "rotate-135");
 $card.classList.add("opacity-80","sepia");
 $card.classList.remove("opacity-80","sepia");
-$card.classList.toggle("sepia", "opacity-80");
+$card.classList.toggle("sepia", "opacity-80"); */
+
+
+
+
+
+
+/* texto y HTML */
+/* const $whatIsDOM = document.getElementById("que-es");
+
+let text = `
+    <p>
+        El modelo de objetos del documento ( <b><i>DOM - Document Object Model</i></b> ) es una API para documentos HTML y XML.
+    </p>
+    <p>
+        Este provee una representacion estructural del documento, permitiendo modificar su contenido y presentacion visual mediante codigo JS.
+    </p>
+    <p>
+        <mark>El DOM no es parte de la especificacion de Javascript, es una API para los navegadores</mark>
+    </p>
+`; */
+//$whatIsDOM.innerText = text;
+/* $whatIsDOM.textContent  = text;
+$whatIsDOM.innerHTML = text;
+$whatIsDOM.outerHTML = text; */
+
+
+
+
+
+/* DOM Traversing */
+const $cards = document.querySelector(".cards");
+
+console.log($cards);
+console.log($cards.children);
+console.log($cards.children[1]);
+console.log($cards.parentElement);
+console.log($cards.firstElementChild);
+console.log($cards.lastElementChild);
+console.log($cards.previousElementSibling);
+console.log($cards.nextElementSibling);
+console.log($cards.closest("div"));
+console.log($cards.closest("body"));
+console.log($cards.children[1].closest("section"));
+
+
 
 
 

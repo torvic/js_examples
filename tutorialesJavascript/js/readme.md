@@ -1,4 +1,4 @@
-# Estilos y variables CSS
+## Estilos y variables CSS
 ```
 $linkDOM
     |---> .style
@@ -19,6 +19,30 @@ window.getComputedStyle($linkDOM)
         |---> .replace("<style-class-replaced>","<style-class>")
         |---> .toggle("<style-class>")
 ```
+## text & HTML
+```
+$whatIsDOM
+    |---> innerText = <text>
+    |---> textContent = <text>
+    |---> innerHTML = <text>
+    |---> outerHTML = <text>
+
+```
+## DOM traversing
+```
+$cards
+    |---> .children => HTMLCollection[]
+    |---> .children[<#>]
+        |---> .closest("<etiqueta>")
+    |---> .parentElement
+    |---> .firtsElementChild
+    |---> .lastElementChild
+    |---> .previousElementSibling
+    |---> .nextElementSibling
+    |---> .closest("<etiqueta>")
+
+```
+
 
 
 
