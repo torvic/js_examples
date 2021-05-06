@@ -256,7 +256,7 @@ document.body.appendChild($ul3); */
 
 
 /* Templates HTML */
-const $cards = document.querySelector(".cards"),
+/* const $cards = document.querySelector(".cards"),
 $template = document.getElementById("template-card").content,
 $fragment = document.createDocumentFragment(),
 cardContent = [
@@ -291,7 +291,37 @@ cardContent.forEach(el => {
     $fragment.appendChild($clone);
 });
 
-$cards.appendChild($fragment);
+$cards.appendChild($fragment); */
+
+
+
+
+
+/* Modificando elementos (Old Style) */
+const $cards = document.querySelector(".cards"),
+$newCard = document.createElement("figure"),
+$newCards = $cards.cloneNode(true);
+
+$newCard.innerHTML = `
+    <img src="https://placeimg.com/200/200/any" alt="Any">
+    <figcaption>Any</figcaption>
+`;
+
+$newCard.classList.add("card");
+
+//$cards.replaceChild($newCard, $cards.children[2]);
+//$cards.insertBefore($newCard,$cards.children[0]);
+//$cards.removeChild($cards.lastElementChild);
+
+document.body.appendChild($newCards);
+
+
+
+
+
+
+
+
 
 
 

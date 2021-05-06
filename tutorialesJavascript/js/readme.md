@@ -65,6 +65,29 @@ Clonar un Nodo:
 $<clone> <-- document
                 |---> importNode($<etiqueta>, true)
 ```
+## Modificando Elementos
+Reemplazar nodos hijos:
+```
+$<nodo-padre>
+    |---> .replaceChild(<new-nodo>, <nodo-a-reemplazar>)
+```
+Insertar un nodo-child antes de un nodo-child de referencia:
+```
+$<nodo-padre>
+    |---> .insertBefore(<new-nodo>, <nodo-referencia>)
+```
+Eliminar un nodo-child:
+```
+$<node-padre>
+    |---> .removeChild(<nodo-child>)
+```
+Otra forma de colnar un nodo:
+```
+$<clone> <-- $cards
+                |---> .cloneNode(true|false)
+```
+
+
 
 
 
