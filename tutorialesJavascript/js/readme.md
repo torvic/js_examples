@@ -42,6 +42,29 @@ $cards
     |---> .closest("<etiqueta>")
 
 ```
+## Creando Elementos y Fragmentos
+Crear elemento HTML:
+```
+$<etiqueta> <-- document
+                    |---> .createElement("<etiqueta>")
+```
+Añador elemento hijo a un elemento padre:
+```
+$<etiqueta>
+    |---> .appendChild($<etiqueta-child>)
+```
+Crear fragmentos
+```
+$<fragmento> <-- document
+                    |---> .createDocumentFragment()
+```
+## Templates HTML
+Crear template HTML `<template>...</template>`.
+Clonar un Nodo:
+```
+$<clone> <-- document
+                |---> importNode($<etiqueta>, true)
+```
 
 
 
