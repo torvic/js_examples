@@ -298,7 +298,7 @@ $cards.appendChild($fragment); */
 
 
 /* Modificando elementos (Old Style) */
-const $cards = document.querySelector(".cards"),
+/* const $cards = document.querySelector(".cards"),
 $newCard = document.createElement("figure"),
 $newCards = $cards.cloneNode(true);
 
@@ -313,7 +313,66 @@ $newCard.classList.add("card");
 //$cards.insertBefore($newCard,$cards.children[0]);
 //$cards.removeChild($cards.lastElementChild);
 
-document.body.appendChild($newCards);
+document.body.appendChild($newCards); */
+
+
+
+
+
+/* Manejadores de Eventos */
+/* function holaMundo() {
+    alert("Hola mundo");
+    console.log(event);
+};
+
+function saludar(nombre="desconocid@") {
+    alert(`Hola ${nombre}`);   
+    console.log(event);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico"),
+$eventoMultiple = document.getElementById("evento-multiple"),
+$eventoRemover = document.getElementById("evento-remover");
+
+
+$eventoSemantico.onclick = holaMundo;
+$eventoSemantico.onclick = (e) => {
+    alert("Hola mundo Manejador de eventos Semanticos");    
+    console.log(e);
+    console.log(event);
+};
+
+$eventoMultiple.addEventListener("click", holaMundo);
+$eventoMultiple.addEventListener("click", (e) => {
+    alert("Hola mundo manejador de eventos multiples");
+    console.log(e);
+    console.log(e.type);
+    console.log(e.target);
+    console.log(event);
+});
+
+$eventoMultiple.addEventListener("click", () => {
+    saludar();
+    saludar("Timon");
+});
+
+const removerDobleClick = (e) => {
+    alert(`Removiendo el evento de tipo ${e.type}`);
+    console.log(e);
+    $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+    $eventoRemover.disabled = true;
+}
+
+$eventoRemover.addEventListener("dblclick", removerDobleClick); */
+
+
+
+
+
+/* Flujo de Eventos */
+
+
+
 
 
 
