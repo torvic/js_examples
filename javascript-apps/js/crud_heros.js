@@ -75,7 +75,7 @@ d.addEventListener("submit", async (e) => {
                         group: e.target.group.value
                     })
                 },
-                res = await fetch(`http://127.0.0.1:8000/heros/${e.target.id.value}`, options),
+                res = await fetch(`http://127.0.0.1:8000/heros/${e.target.id.value}/`, options),
                 json = await res.json();
             
                 if (!res.ok) throw {status: res.status, statusText: res.statusText};
@@ -88,4 +88,41 @@ d.addEventListener("submit", async (e) => {
             }
         }
     };
+});
+
+d.addEventListener("click", async e => {
+    if (e.target.matches(".edit")) {
+        $title.textContent = "Editar Hero";
+        $form.hero.value = e.target.dataset.name;
+        $form.group.value = e.target.dataset.group;
+        $form.id.value = e.target.dataset.id;
+    };
+
+    if (e.target.matches(".delete")) {
+        // DELETE
+        let isDelete = confirm(`¿Estas seguto eliminar el id ${e.target.dataset.id}?`)
+
+        if (isDelete) {
+            try {
+                let options = {
+                    method: 'DELETE',
+                    headers: {
+                        "Content-Type": "application/json; charset=utf-8"
+                    }
+                },
+                res = await fetch(`http://127.0.0.1:8000/heros/${e.target.dataset.id}/`, options),
+                json = await res.json();
+            
+                if (!res.ok) throw {status: res.status, statusText: res.statusText};
+    
+                location.reload();
+            
+            } catch (err) {
+                let message = err.statusText || "Ocurrio un error";
+                $table.insertAdjacentHTML("afterend", `<p><b>Error ${err.status}: ${message}</b></p>`);
+            }
+        };
+
+
+    }
 });
