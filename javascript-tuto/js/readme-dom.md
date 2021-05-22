@@ -3,11 +3,29 @@ Objeto padre `window`:
 ```javascript
 console.log(window);
 ```
-Acceder al documento HTML:
+Acceder a todo el documento HTML:
 ```javascript
 console.log(window.document);
 console.log(document);
+
+console.log(document.documentElement); // HTML sin el DOCTYPE
 ```
+Acceder a etiquetas del documento HTML:
+```javascript
+console.log(document.head);
+console.log(document.body);
+
+console.log(document.doctype); // DOCTYPE 
+console.log(document.charset); //meta charset 
+
+console.log(document.title);
+console.log(document.links); // HTMLCollection de los enlaces
+console.log(document.images); // HTMLCollection de las <img>
+console.log(document.forms); // HTMLCollection de <form>
+console.log(document.styleSheets); // StyleSheetList
+console.log(document.scripts); // HTMLCollection de <script>
+```
+
 
 
 
