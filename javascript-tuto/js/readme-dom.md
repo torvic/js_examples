@@ -1,3 +1,16 @@
+## Introduccion al DOM (Document Object Model)
+Objeto padre `window`:
+```javascript
+console.log(window);
+```
+Acceder al documento HTML:
+```javascript
+console.log(window.document);
+console.log(document);
+```
+
+
+
 ## Estilos y variables CSS
 ```
 $linkDOM
