@@ -25,10 +25,29 @@ console.log(document.forms); // HTMLCollection de <form>
 console.log(document.styleSheets); // StyleSheetList
 console.log(document.scripts); // HTMLCollection de <script>
 ```
+## Nodos, Elementos y Selectores
+### Nodo
+Cada objeto ubicado dentro de un documento HTML es un nodo de algun tipo. En un documento HTML, un objeto puede ser un nodo de elemento pero tambien un nodo de texto o un nodo de atributo.
 
-
-
-
+```javascript
+console.log(document.getElementsByTagName("li")); // HTMLCollection de <li></li>
+console.log(document.getElementsByTagName("li")[0]); // Accediendo al primer <li></li> (element_node)
+console.log(document.getElementsByClassName("card")); // HTMLCollection de elementos con el atributo class="card"
+console.log(document.getElementsByName("nombre")); // Coleccion NodeList de elementos con el atributo name="nombre"
+console.log(document.getElementById("menu")); // (element_node) con el atributo id="menu"
+```
+### Selectores
+Los metodos `document.querySelector()` y `document.querySelectorAll()` deben tener como argumento una sintaxis CSS valida.
+```javascript
+console.log(document.querySelector("#menu"));
+console.log(document.querySelector("a"));
+console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length);
+document.querySelectorAll("a").forEach(el => console.log(el));
+console.log(document.querySelector(".card"));
+console.log(document.querySelectorAll(".card")[2]);
+console.log(document.querySelectorAll("#menu li"));
+```
 ## Estilos y variables CSS
 ```
 $linkDOM
