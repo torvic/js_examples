@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lectura de los sensores</title>
+  <link rel="stylesheet" href="css/electric-sensors.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Lectura de los Sensores</h1>
+  </header>
+  <main>
+    <section class="crud container">
+      <article class="items">
+        <h2>List of Sensors</h2>
+        <table class="sensors-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </article>
+      <hr>
+      <article class="items">
+        <h2 class="lecturas-title"></h2>
+        <table class="lecturas-table">
+          <thead>
+            <tr>
+              <th class="head-id"></th>
+              <th class="head-nombre"></th>
+              <th class="head-fecha"></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+      </article>
+    </section>
+    
+    <template class="sensors-template">
+      <tr>
+        <td class="id"></td>
+        <td class="nombre"></td>
+        <td>
+          <button class="ver">ver</button>
+        </td>
+      </tr>
+    </template>
+
+    <template class="lecturas-template">
+      <tr>
+        <td class="id"></td>
+        <td class="lectura"></td>
+        <td class="fecha"></td>
+      </tr>
+    </template>
+  </main>
+
+  <script src="js/electricSensors.js"></script>
+</body>
+</html>
