@@ -48,7 +48,53 @@ console.log(document.querySelector(".card"));
 console.log(document.querySelectorAll(".card")[2]);
 console.log(document.querySelectorAll("#menu li"));
 ```
+### Atributos y Data-atribute
+
+`document.documentElement` devuelve el elemento `<html>`:
+```javascript
+console.log(document.documentElement.lang);
+console.log(document.documentElement.getAttribute("lang"));
+```
+`getAttribute()` devuelve el valor del atributo especificado en el elemento:
+```javascript
+console.log(document.querySelector(".link-dom").href); // Otra forma
+console.log(document.querySelector(".link-dom").getAttribute("href"));
+```
+`setAttibute()` añade el valor de un atributo en el elemento indicado. Si el atributo ya existe, el valor es actualizado:
+```javascript
+document.documentElement.lang = "es"; // Otra forma de actualizar
+console.log(document.documentElement.lang);
+
+document.documentElement.setAttribute("lang", "es-MX");
+console.log(document.documentElement.lang);
+```
+`Element.hasAttribute()` devuelver un valor **Booleano** indicando si el elemento tiene el atributo especificado o no:
+```javascript
+const $linkDOM = document.querySelector(".link-dom");
+console.log($linkDOM.hasAttribute("rel"));
+```
+`Element.removeAttribute()` elimina un atributo del elemento especificado:
+```javascript
+$linkDOM.removeAttribute("rel");
+```
+Los atributos `data-*` permiten almacenar informacion adicional sobre un elemento HTML.
+
+La propiedad **dataset** proporciona una interfaz lectura/escritura para obtener los **atributos de datos personalizados**:
+```javascript
+const $linkDOM = document.querySelector(".link-dom");
+
+console.log($linkDOM.getAttribute("data-description"));
+console.log($linkDOM.dataset);
+console.log($linkDOM.dataset.description);
+console.log($linkDOM.dataset.id);
+
+$linkDOM.setAttribute("data-description","Modelo de objeto del documento")
+console.log($linkDOM.dataset.description);
+$linkDOM.dataset.description = "Boom chakalaka"; // Escritura
+console.log($linkDOM.hasAttribute("data-id"));
+```
 ## Estilos y variables CSS
+
 ```
 $linkDOM
     |---> .style
