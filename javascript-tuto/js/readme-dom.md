@@ -48,7 +48,7 @@ console.log(document.querySelector(".card"));
 console.log(document.querySelectorAll(".card")[2]);
 console.log(document.querySelectorAll("#menu li"));
 ```
-### Atributos y Data-atribute
+## Atributos y Data-atribute
 
 `document.documentElement` devuelve el elemento `<html>`:
 ```javascript
