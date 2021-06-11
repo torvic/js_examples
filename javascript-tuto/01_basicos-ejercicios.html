@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de Logica de Programacion en JavaScript</title>
+  </head>
+  <body>
+    <h1>Ejercicios de logica de Programacion en JavaScript</h1>
+    <script>
+			/* 1) Programa un funcion que cuente el numero de caracteres de una cadena de Texto, pe. miFuncion("Hola mundo") devolvera 10 */
+			(() => {
+        const numberCharacters = (character="") => 
+				(!character) ? 
+				console.warn("No ingresaste ninguna cadena")
+				:console.info(`La cadena '${character}' tiene ${character.length} caracteres`);
+        
+        //numberCharacters();
+        //numberCharacters("Hola Mundo");
+      })();
+
+
+
+
+
+			/* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, 
+			pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
+      (() => {
+
+				/* Metodo 1 */
+				/* const cutOffText = (text="", cutOff=undefined) => 
+				(!text) ?
+					console.warn("No ingresaste una cadena de texto")
+					:console.info(text.split("", cutOff).join('')); */
+				
+				/* Metodo 2 */
+				const cutOffText = (text="", cutOff=undefined) => 
+				(!text)?
+					console.warn("No ingresaste una cadena de texto")
+					: (cutOff === undefined)?
+						console.warn("No ingresaste la longitud para cortar el texto")
+						:console.info(text.slice(0,cutOff));
+
+			cutOffText();
+			cutOffText("", 2);
+			cutOffText("Hola Mundo", 4);
+			cutOffText("Hola Mundo", 6);
+			cutOffText("Hola Mundo");
+				
+			})();
+
+
+
+
+
+			/* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
+			miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'] */
+			(()=>{
+				const arrayText = (string, separator) => {
+					let arrText = string.split(separator)
+					return console.info(arrText);
+				}
+				//arrayText('Hola que tal', ' ');
+				//arrayText('Hola Mundo', '');
+				//arrayText('Hola-Mundo-!!!', '-');
+			})();
+
+
+
+
+
+			/* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) 
+			devolverá Hola Mundo Hola Mundo Hola Mundo */				
+			(()=>{
+				const repeatText = (text, repeat) => {
+					let textAcu = '';
+					for (let index = 0; index < repeat; index++) {
+						textAcu += text + ' ';	
+					}
+					console.info(textAcu);
+				}
+				//repeatText('Hola Mundo', 3);
+				//repeatText('Hola Mundo', 4);
+				//repeatText('Hola Mundo', 5);
+			})();
+    </script>
+  </body>
+</html>
