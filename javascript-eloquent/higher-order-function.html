@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Funciones de Orden Superior</title>
+</head>
+<body>
+	<h1>Funciones de Orden Superior</h1>
+	<script>
+			/* ========== FUNCIONES DE ORDEN SUPERIOR ==========*/
+
+			/* Funciones que operan en otras funciones, ya sea tomandolas como argumentos o retornandolas. Estas funciones
+			nos permiten abstraer sobre acciones, no solo sobre valores */
+			(() => {
+				// a) Funciones que crean nuevas funciones
+				function mayorQue(n) {
+					return m => m > n; //	
+				}
+				let mayorQue10 = mayorQue(10);
+				console.log(mayorQue10(11)); // -> true
+				console.log(mayorQue10(9)); // -> false 
+
+				// b) Funciones que cambian otras funciones
+				function ruidosa(fun) {
+					return (...arg) => {
+						console.log("Llamando con", arg);
+						let result = fun(...arg);
+						console.log("Llamada con", arg, ", retorno", result);
+						return result
+					};	
+				}
+				ruidosa(Math.min)(1, 2, 3);
+				// → llamando con [3, 2, 1]
+				// → llamada con [3, 2, 1] , retorno 1
+
+				// c) Funciones que proporcionan nuevos tipos de flujo de control
+				function aMenosQue(prueba, entonces) {
+					if (!prueba) entonces();
+				}
+
+				function repetir(times, fun) {
+					for (let j = 0; j < times; j++) {
+						fun(j);
+					}
+				};
+
+				repetir(3, n => {
+					aMenosQue(n % 2 == 1, () => {
+						console.log(n, "es par");
+					});
+				});
+
+				// → 0 es par
+				// → 2 es par
+
+				// d) Metodo array incorporado "forEach" ciclo for/of como una funcion de orden superior
+				["A", "E"].forEach(vocal => console.log(vocal));
+
+			})();
+	</script>	
+</body>
+</html>
