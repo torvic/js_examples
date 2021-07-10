@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Binaria</title>
+    <style>
+      body {
+        width: 33%;
+      }
+
+      #res {
+        background-color: lightgray;
+        border: solid;
+        height: 48px;
+        font-size: 20px;
+      }
+
+      .buttonClass {
+        width: 25%;
+        height: 36px;
+        font-size: 18px;
+        margin: 0px;
+        float: left;
+      }
+
+      #btn0,
+      #btn1 {
+        background-color: lightgreen;
+        color: brown;
+      }
+
+      #btnClr,
+      #btnEql {
+        background-color: darkgreen;
+        color: white;
+      }
+
+      #btnSum,
+      #btnSub,
+      #btnMul,
+      #btnDiv {
+        background-color: black;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculadora Binaria</h1>
+    <div id="res"></div>
+    <div id="btns" class="buttonContainer">
+      <button id="btn0" class="buttonClass">0</button>
+      <button id="btn1" class="buttonClass">1</button>
+      <button id="btnClr" class="buttonClass">C</button>
+      <button id="btnEql" class="buttonClass">=</button>
+      <button id="btnSum" class="buttonClass">+</button>
+      <button id="btnSub" class="buttonClass">-</button>
+      <button id="btnMul" class="buttonClass">*</button>
+      <button id="btnDiv" class="buttonClass">/</button>
+    </div>
+    <script>
+      let d = document,
+        $res = d.getElementById('res'),
+        $btn0 = d.getElementById('btn0'),
+        $btn1 = d.getElementById('btn1'),
+        $btnClr = d.getElementById('btnClr');
+
+      /* Delegacion de eventos */
+      d.addEventListener('click', (e) => {
+        if (e.target.matches('#btn0')) {
+          $res.innerHTML += e.target.innerHTML;
+        }
+
+        if (e.target.matches('#btn1')) {
+          $res.innerHTML += e.target.innerHTML;
+        }
+        if (e.target.matches('#btnClr')) {
+          $res.innerHTML = '';
+        }
+      });
+
+      /* Parameter 'e' is the click Event */
+      function action(e) {
+        /* Older IE browsers have a srcElement property,
+                  but other browsers have a 'target' property;
+                  Set btn to whichever exists. */
+        // var btn = e.target || e.srcElement;
+
+        /* Get the clicked element's innerHTML */
+        console.log(e.target.innerHTML);
+        $res.innerHTML += e.target.innerHTML;
+        // document.getElementById(btn.id).innerHTML++;
+      }
+
+      /* Add a click event listener that calls action(e) when clicked */
+      // $btn0.addEventListener('click', action);
+
+      // document.getElementById('btn1').addEventListener('click', action);
+      // document.getElementById('btn3').addEventListener('click', action);
+      // document.getElementById('btn4').addEventListener('click', action);
+    </script>
+  </body>
+</html>
