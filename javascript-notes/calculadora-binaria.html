@@ -78,6 +78,66 @@
         if (e.target.matches('#btnClr')) {
           $res.innerHTML = '';
         }
+        if (e.target.matches('#btnEql')) {
+          // Hacer la operacion
+          let exp = $res.innerHTML;
+          // console.log(exp);
+
+          // suma
+          if (exp.includes('+') === true) {
+            const arrExp = exp.split('+');
+            // console.log(arrExp);
+            let sumDec = parseInt(arrExp[0], 2) + parseInt(arrExp[1], 2);
+            // console.log('suma decimal', sumDec);
+            const result = sumDec.toString(2);
+            $res.innerHTML = result;
+          }
+
+          //subtraction
+          if (exp.includes('-') === true) {
+            const arrExp = exp.split('-');
+            // console.log(arrExp);
+            let subDec = parseInt(arrExp[0], 2) - parseInt(arrExp[1], 2);
+            // console.log('suma decimal', sumDec);
+            const result = subDec.toString(2);
+            $res.innerHTML = result;
+          }
+
+          // multiplication
+          if (exp.includes('*') === true) {
+            const arrExp = exp.split('*');
+            // console.log(arrExp);
+            let mulDec = parseInt(arrExp[0], 2) * parseInt(arrExp[1], 2);
+            // console.log('suma decimal', sumDec);
+            const result = mulDec.toString(2);
+            $res.innerHTML = result;
+          }
+
+          // division
+          if (exp.includes('/') === true) {
+            const arrExp = exp.split('/');
+            // console.log(arrExp);
+            let divDec = Math.floor(
+              parseInt(arrExp[0], 2) / parseInt(arrExp[1], 2)
+            );
+            // console.log('suma decimal', sumDec);
+            const result = divDec.toString(2);
+            $res.innerHTML = result;
+          }
+        }
+        if (e.target.matches('#btnSum')) {
+          let befSum = $res.innerHTML;
+          $res.innerHTML += '+';
+        }
+        if (e.target.matches('#btnSub')) {
+          $res.innerHTML += '-';
+        }
+        if (e.target.matches('#btnMul')) {
+          $res.innerHTML += '*';
+        }
+        if (e.target.matches('#btnDiv')) {
+          $res.innerHTML += '/';
+        }
       });
 
       /* Parameter 'e' is the click Event */
