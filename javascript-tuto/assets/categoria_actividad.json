@@ -1,0 +1,81 @@
+﻿{
+    "categoria": [
+        {
+            "id_categoria": "CAT01",
+            "nombre_categoria": "Aventura",
+            "flag_categoria": "0"
+        },
+        {
+            "id_categoria": "CAT02",
+            "nombre_categoria": "Propuesta de Matrimonio",
+            "flag_categoria": "0"
+        },
+        {
+            "id_categoria": "CAT03",
+            "nombre_categoria": "Vacaciones Familiares",
+            "flag_categoria": "0"
+        },
+        {
+            "id_categoria": "CAT04",
+            "nombre_categoria": "Conciertos y Festivales",
+            "flag_categoria": "0"
+        },
+        {
+            "id_categoria": "CAT05",
+            "nombre_categoria": "Escapada romántica",
+            "flag_categoria": "0"
+        },
+        {
+            "id_categoria": "CAT06",
+            "nombre_categoria": "Viaje de amigos",
+            "flag_categoria": "0"
+        }
+    ],
+    "actividad": [
+        {
+            "id_actividad": "ACT01",
+            "nombre_actividad": "Gastronomía",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT02",
+            "nombre_actividad": "Shopping",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT03",
+            "nombre_actividad": "Exploración",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT04",
+            "nombre_actividad": "Gemas ocultas",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT05",
+            "nombre_actividad": "Actividades relajantes",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT06",
+            "nombre_actividad": "Vida Nocturna",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT07",
+            "nombre_actividad": "Playas",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT08",
+            "nombre_actividad": "Diversión gay",
+            "flag_actividad": "0"
+        },
+        {
+            "id_actividad": "ACT09",
+            "nombre_actividad": "Otras actividades",
+            "flag_actividad": "0"
+        }
+    ]
+}
